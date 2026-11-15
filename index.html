@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ジムバトル用手持ち管理シート ランチャー</title>
+<style>
+  body { font-family: sans-serif; margin: 24px; background: #fafafa; color: #222; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  h2 { font-size: 13px; color: #666; margin: 20px 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; max-width: 720px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn { display: block; text-align: center; padding: 14px 6px; background: #fff; border: 1px solid #ccc; border-radius: 10px; color: #222; text-decoration: none; font-size: 16px; }
+  .btn:hover { background: #eef4ff; border-color: #7aa2ff; }
+  .allbtn { padding: 10px 16px; border-radius: 10px; border: 1px solid #7aa2ff; background: #eef4ff; font-size: 14px; cursor: pointer; }
+  .note { font-size: 12px; color: #888; margin-top: 16px; max-width: 720px; }
+</style>
+</head>
+<body>
+<h1>ジムバトル用手持ち管理シート</h1>
+<div class="row" style="margin-top:12px">
+  <button class="allbtn" onclick="openAll(TYPES)">タイプ別18シートを全部開く</button>
+  <button class="allbtn" onclick="openAll(ALL)">全21シートを開く</button>
+</div>
+<h2>タイプ別</h2>
+<div class="grid">
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=0" target="_blank" rel="noopener">炎</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1950765304" target="_blank" rel="noopener">水</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=130007679" target="_blank" rel="noopener">電</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1269426888" target="_blank" rel="noopener">草</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=875712542" target="_blank" rel="noopener">氷</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=938654483" target="_blank" rel="noopener">闘</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=719160847" target="_blank" rel="noopener">毒</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1040037520" target="_blank" rel="noopener">地</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1573891422" target="_blank" rel="noopener">飛</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=932444340" target="_blank" rel="noopener">超</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1216576501" target="_blank" rel="noopener">虫</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=915844880" target="_blank" rel="noopener">岩</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=474646708" target="_blank" rel="noopener">霊</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=561826314" target="_blank" rel="noopener">竜</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=730585825" target="_blank" rel="noopener">悪</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1574113053" target="_blank" rel="noopener">鋼</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1470620109" target="_blank" rel="noopener">妖</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1674191564" target="_blank" rel="noopener">普</a>
+</div>
+<h2>その他</h2>
+<div class="grid">
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=572877274" target="_blank" rel="noopener">原本_コピー用</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=249503683" target="_blank" rel="noopener">表紙</a>
+<a class="btn" href="https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1827281655" target="_blank" rel="noopener">デバフ関連</a>
+</div>
+<p class="note">「全部開く」が一部しか開かない時は、Chromeのアドレスバー右端に出るポップアップブロックのアイコンから、このページのポップアップを許可してね。</p>
+<script>
+const ALL = ["https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=572877274", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=249503683", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1827281655", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=0", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1950765304", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=130007679", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1269426888", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=875712542", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=938654483", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=719160847", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1040037520", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1573891422", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=932444340", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1216576501", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=915844880", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=474646708", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=561826314", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=730585825", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1574113053", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1470620109", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1674191564"];
+const TYPES = ["https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=0", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1950765304", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=130007679", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1269426888", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=875712542", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=938654483", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=719160847", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1040037520", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1573891422", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=932444340", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1216576501", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=915844880", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=474646708", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=561826314", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=730585825", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1574113053", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1470620109", "https://docs.google.com/spreadsheets/d/117PrKeipHic11EPBo6uvWXH537tqkhPfT-wHQwlWbpw/edit#gid=1674191564"];
+function openAll(urls) { urls.forEach(u => window.open(u, '_blank')); }
+</script>
+</body>
+</html>
